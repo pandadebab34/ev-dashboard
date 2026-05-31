@@ -689,3 +689,23 @@ box-shadow:0 0 15px #00e5ff;
   color:#aaa;
   font-size:13px;
 }
+.dual-climate{
+  display:flex;
+  justify-content:center;
+  gap:80px;
+  margin-top:30px;
+}
+
+.climate-side{
+  width:250px;
+  text-align:center;
+}
+
+.climate-side h2{
+  color:#00e5ff;
+  margin-bottom:15px;
+}
+
+.climate-side input{
+  width:100%;
+}
