@@ -161,3 +161,28 @@ function toggleMusic(){
   }, 3000);
 
 }
+const leftFanSlider =
+document.getElementById("leftFanSlider");
+
+const leftFanValue =
+document.getElementById("leftFanValue");
+
+if(leftFanSlider){
+  leftFanSlider.addEventListener("input", () => {
+    leftFanValue.innerHTML =
+      leftFanSlider.value;
+  });
+}
+
+const rightFanSlider =
+document.getElementById("rightFanSlider");
+
+const rightFanValue =
+document.getElementById("rightFanValue");
+
+if(rightFanSlider){
+  rightFanSlider.addEventListener("input", () => {
+    rightFanValue.innerHTML =
+      rightFanSlider.value;
+  });
+}
