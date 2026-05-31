@@ -1,0 +1,271 @@
+<div class="dashboard">
+
+  <div class="topbar">
+    <div>🚗 92 km/h</div>
+    <div>🔋 97%</div>
+    <div>📍 485/500 km</div>
+    <div>☀️ 30°C</div>
+    <div id="clock">12:00 PM</div>
+  </div>
+
+  <div class="content">
+
+```
+<div class="screen-area">
+<div id="volumePopup" class="volume-popup">
+
+  <h3>Volume</h3>
+
+  <div id="volumeLevel">70%</div>
+
+  <input
+    type="range"
+    min="0"
+    max="100"
+    value="70"
+    id="volumeControl"
+  >
+<div id="musicPopup" class="music-popup">
+
+  <img
+    src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=300"
+    class="album-cover"
+  >
+
+  <div class="song-title">
+    Blinding Lights
+  </div>
+
+  <div class="artist-name">
+    The Weeknd
+  </div>
+
+  <div class="spotify-bar">
+    <div class="spotify-progress"></div>
+  </div>
+
+  <div class="music-controls">
+    <button>⏮</button>
+    <button>▶</button>
+    <button>⏭</button>
+  </div>
+
+</div>
+</div>
+  <!-- DASHBOARD -->
+  <div class="screen active" id="dashboard">
+  <div class="speed-panel">
+
+    <div class="speedometer">
+      <div class="speed-ring"></div>
+      <div class="speed-number">80</div>
+      <div class="speed-unit">MPH</div>
+    </div>
+
+    <div class="dashboard-cards">
+
+      <div class="info-card">
+        <h3>🔋 Battery</h3>
+        <p>97%</p>
+        <span>485 km</span>
+      </div>
+
+      <div class="info-card">
+        <h3>🌀 Climate</h3>
+        <p>22°C</p>
+        <span>Fan 3</span>
+      </div>
+
+      <div class="info-card">
+        <h3>🎵 Music</h3>
+        <p>Playing</p>
+        <span>Blinding Lights</span>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+  <!-- NAVIGATION -->
+  <div class="screen" id="navigation">
+    <div class="speed-panel">
+
+      <iframe
+        src="https://www.google.com/maps?q=Universiti%20Malaysia%20Sarawak&output=embed"
+        width="90%"
+        height="85%"
+        style="
+          border:0;
+          border-radius:20px;
+        "
+        loading="lazy">
+      </iframe>
+
+    </div>
+  </div>
+
+  <!-- CHARGING -->
+
+<div class="screen" id="charging">
+
+  <div class="speed-panel">
+
+```
+<div class="charging-layout">
+
+  <div class="charge-circle">
+    <div class="charge-percent">97%</div>
+    <div class="charge-text">Battery Charge</div>
+  </div>
+
+  <div class="station-icon">⚡</div>
+
+  <div class="car-section">
+
+    <img
+      src="https://cdn-icons-png.flaticon.com/512/3097/3097144.png"
+      class="ev-car"
+    >
+
+    <div class="charging-status">
+      Charging...
+    </div>
+
+    <div class="range-info">
+      485 km Range Available
+    </div>
+
+  </div>
+
+</div>
+```
+
+  </div>
+
+</div>
+
+
+<!-- FAN -->
+<div class="screen" id="fan">
+
+  <div class="speed-panel">
+
+    <div class="climate-panel">
+
+      <h1>Climate Control</h1>
+
+      <!-- Temperature Display -->
+      <div class="temp-display">
+  <span id="tempValue">22</span>
+</div>
+
+      <!-- Fan Icon -->
+      <i class="fas fa-fan fan-icon"></i>
+
+      <h2>Temperature</h2>
+
+      <div class="temp-buttons">
+        <button onclick="decreaseTemp()">−</button>
+        <button onclick="increaseTemp()">+</button>
+      </div>
+
+      <input
+        type="range"
+        min="16"
+        max="30"
+        value="22"
+        id="tempSlider"
+      >
+
+      <div class="fan-section">
+
+        <h2>
+          Fan Speed:
+          <span id="fanValue">3</span>
+        </h2>
+
+        <input
+          type="range"
+          min="1"
+          max="5"
+          value="3"
+          id="fanSlider"
+        >
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+  <!-- VOICE -->
+  <div class="screen" id="voice">
+
+  <div class="speed-panel">
+
+    <div class="voice-panel">
+
+      <h1>Voice Assistant</h1>
+
+      <div class="mic-circle">
+        🎤
+      </div>
+
+      <div class="voice-status">
+        Listening...
+      </div>
+
+      <div class="voice-text">
+        "Navigate to UNIMAS"
+      </div>
+
+      <div class="voice-buttons">
+        <button>Activate</button>
+        <button>Stop</button>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+  <!-- EMERGENCY -->
+  <div class="screen" id="emergency">
+    <div class="speed-panel">
+
+      <div>
+        <h1>Emergency</h1>
+
+        <button class="emergency-btn">
+          Call 999
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<div class="side-menu">
+  <button onclick="showScreen('dashboard')">🏠</button>
+  <button onclick="showScreen('navigation')">🧭</button>
+  <button onclick="showScreen('charging')">🔋</button>
+  <button onclick="showScreen('fan')">🌀</button>
+  <button onclick="showScreen('voice')">🎤</button>
+  <button onclick="showScreen('emergency')">⚠️</button>
+</div>
+```
+
+  </div>
+
+  <div class="bottom-bar">
+    <button onclick="toggleMusic()">Music</button>
+    <button>A/C</button>
+    <button>Defrost</button>
+    <button onclick="toggleVolume()">Volume</button>
+    <button onclick="showScreen('dashboard')">Home</button>
+  </div>
+
+</div>

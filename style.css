@@ -1,0 +1,689 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+}
+
+body{
+background:#07121f;
+color:white;
+height:100vh;
+}
+
+.dashboard{
+width:100%;
+height:100vh;
+display:flex;
+flex-direction:column;
+background:linear-gradient(
+180deg,
+#0b1b2d 0%,
+#081421 100%
+);
+}
+
+/* TOP BAR */
+
+.topbar{
+height:50px;
+display:flex;
+justify-content:space-around;
+align-items:center;
+background:#111827;
+border-bottom:1px solid rgba(0,255,255,.2);
+border-radius:0 0 12px 12px;
+font-size:15px;
+font-weight:600;
+color:#8cecff;
+}
+
+/* CONTENT */
+
+.content{
+flex:1;
+display:flex;
+}
+
+/* MAIN SCREEN */
+
+.screen-area{
+flex:1;
+display:flex;
+justify-content:center;
+align-items:center;
+position:relative;
+}
+
+.screen{
+display:none;
+text-align:center;
+width:100%;
+height:100%;
+padding:30px;
+}
+
+.screen.active{
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+}
+
+.screen h1{
+color:#00e5ff;
+margin-bottom:20px;
+font-size:42px;
+}
+
+.screen h2{
+color:#ffffff;
+font-weight:300;
+}
+
+/* NAVIGATION SCREEN */
+
+.screen img{
+width:80%;
+max-width:700px;
+border-radius:20px;
+box-shadow:0 0 25px rgba(0,229,255,.3);
+}
+
+/* RIGHT MENU */
+
+.side-menu{
+width:120px;
+background:#102338;
+display:flex;
+flex-direction:column;
+gap:15px;
+padding:20px;
+border-left:1px solid rgba(0,255,255,.2);
+}
+
+.side-menu button{
+  width:70px;
+  height:50px;
+  margin:auto;
+  border:none;
+  border-radius:10px;
+  background:#d9d9d9;
+  color:black;
+  font-size:28px;
+  cursor:pointer;
+  transition:.3s;
+}
+
+.side-menu button:hover{
+background:#00e5ff;
+color:black;
+transform:translateX(-4px);
+}
+
+/* CHARGING */
+
+.battery{
+width:250px;
+height:100px;
+border:4px solid #00e5ff;
+border-radius:15px;
+overflow:hidden;
+margin-bottom:20px;
+}
+
+.battery-fill{
+height:100%;
+width:97%;
+background:linear-gradient(
+90deg,
+#00ff88,
+#00e5ff
+);
+
+animation:charge 2s infinite alternate;
+}
+
+@keyframes charge{
+from{
+width:85%;
+}
+
+to{
+width:97%;
+}
+}
+
+/* FAN */
+
+input[type="range"]{
+width:350px;
+margin-top:20px;
+}
+
+/* VOICE */
+
+.mic{
+font-size:120px;
+animation:pulse 1.5s infinite;
+}
+
+@keyframes pulse{
+0%{
+transform:scale(1);
+}
+
+50%{
+transform:scale(1.15);
+}
+
+100%{
+transform:scale(1);
+}
+}
+
+/* EMERGENCY */
+
+.emergency-btn{
+background:#ff3b3b;
+color:white;
+border:none;
+padding:20px 40px;
+border-radius:15px;
+font-size:22px;
+cursor:pointer;
+box-shadow:0 0 20px rgba(255,0,0,.4);
+}
+
+/* BOTTOM BAR */
+
+.bottom-bar{
+height:80px;
+background:#102338;
+display:flex;
+justify-content:space-evenly;
+align-items:center;
+border-top:1px solid rgba(0,255,255,.2);
+}
+
+.bottom-bar button{
+  width:120px;
+  height:45px;
+  border-radius:25px;
+  border:1px solid #666;
+  background:#0b1220;
+  color:white;
+  font-size:16px;
+}
+.bottom-bar button:hover{
+background:#00e5ff;
+color:black;
+transform:scale(1.1);
+}
+.speedometer{
+    width:280px;
+    height:280px;
+    position:relative;
+    margin-top:-40px;
+}
+.speed-ring{
+    width:100%;
+    height:100%;
+    border:10px solid #00e5ff;
+    border-radius:50%;
+    border-right-color:transparent;
+    transform:rotate(45deg);
+    box-shadow:0 0 20px #00e5ff;
+}
+
+.speed-number{
+    position:absolute;
+    top:35%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    font-size:90px;
+    font-weight:bold;
+    color:#00e5ff;
+}
+
+.speed-unit{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translateX(-50%);
+    color:#00e5ff;
+    font-size:30px;
+}
+.speed-panel{
+  width:800px;
+  height:450px;
+
+  background:#020814;
+
+  border-radius:20px;
+
+  display:flex;
+  flex-direction:column;
+
+  justify-content:center;
+  align-items:center;
+
+  gap:20px;
+}
+#navigation img{
+  box-shadow:0 0 20px rgba(0,229,255,.3);
+}
+.charging-layout{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:80px;
+}
+
+.charge-circle{
+width:220px;
+height:220px;
+border:10px solid #00e5ff;
+border-radius:50%;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+box-shadow:0 0 30px #00e5ff;
+animation:pulseCharge 2s infinite;
+min-width:220px;
+}
+
+.charge-percent{
+font-size:52px;
+font-weight:bold;
+color:white;
+}
+
+.charge-text{
+color:#aaf8ff;
+margin-top:10px;
+}
+
+.car-section{
+text-align:center;
+}
+
+.car-icon{
+font-size:120px;
+filter:drop-shadow(0 0 20px #00e5ff);
+}
+
+.charging-status{
+margin-top:15px;
+font-size:24px;
+color:#00e5ff;
+}
+
+.range-info{
+margin-top:10px;
+color:white;
+}
+
+@keyframes pulseCharge{
+0%{
+box-shadow:0 0 15px #00e5ff;
+}
+50%{
+box-shadow:0 0 40px #00e5ff;
+}
+100%{
+box-shadow:0 0 15px #00e5ff;
+}
+}
+
+.ev-car{
+  width:220px;
+  height:auto;
+  filter:
+    drop-shadow(0 0 10px #00e5ff)
+    drop-shadow(0 0 20px #00e5ff);
+  animation:floatCar 3s ease-in-out infinite;
+}
+
+@keyframes floatCar{
+  0%{
+    transform:translateY(0);
+  }
+
+  50%{
+    transform:translateY(-8px);
+  }
+
+  100%{
+    transform:translateY(0);
+  }
+}
+.station-icon{
+  font-size:80px;
+  color:#00e5ff;
+  text-shadow:0 0 20px #00e5ff;
+}
+.charging-layout{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:80px;
+
+    transform:translateX(30px);
+}
+.climate-panel{
+    width:600px;
+    text-align:center;
+}
+
+.temp-display{
+    font-size:100px;
+    font-weight:700;
+    color:#00e5ff;
+    text-shadow:0 0 20px #00e5ff;
+    margin-bottom:30px;
+}
+
+.climate-panel h2{
+    margin:15px 0;
+    color:white;
+}
+
+#tempSlider{
+    margin-top:20px;
+    margin-bottom:20px;
+}
+#fanSlider{
+    width:450px;
+    margin-bottom:40px;
+}
+.temp-buttons{
+    margin:20px 0;
+}
+
+.temp-buttons button{
+    width:55px;
+    height:55px;
+    border:none;
+    border-radius:50%;
+    background:#00e5ff;
+    color:black;
+    font-size:28px;
+    margin:0 15px;
+    cursor:pointer;
+}
+.fan-icon{
+  font-size:80px;
+  color:#00e5ff;
+  margin-bottom:20px;
+  filter:drop-shadow(0 0 15px #00e5ff);
+  animation:spin 2s linear infinite;
+}
+
+@keyframes spin{
+  from{
+    transform:rotate(0deg);
+  }
+
+  to{
+    transform:rotate(360deg);
+  }
+}
+.voice-panel{
+  text-align:center;
+}
+
+.mic-circle{
+  width:180px;
+  height:180px;
+  border-radius:50%;
+  background:#021524;
+  border:4px solid #00e5ff;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  font-size:90px;
+
+  margin:20px auto;
+
+  box-shadow:0 0 25px #00e5ff;
+
+  animation:voicePulse 2s infinite;
+}
+
+.voice-status{
+  font-size:28px;
+  color:#00e5ff;
+  margin-top:20px;
+}
+
+.voice-text{
+  margin-top:15px;
+  font-size:22px;
+  color:white;
+}
+
+.voice-buttons{
+  margin-top:30px;
+}
+
+.voice-buttons button{
+  width:140px;
+  height:50px;
+
+  margin:0 10px;
+
+  border:none;
+  border-radius:30px;
+
+  background:#00e5ff;
+  color:black;
+
+  font-size:18px;
+  font-weight:bold;
+
+  cursor:pointer;
+}
+
+@keyframes voicePulse{
+
+  0%{
+    box-shadow:0 0 10px #00e5ff;
+  }
+
+  50%{
+    box-shadow:0 0 40px #00e5ff;
+  }
+
+  100%{
+    box-shadow:0 0 10px #00e5ff;
+  }
+
+}
+.volume-popup{
+  position:fixed;
+
+  bottom:85px;
+  right:320px;
+
+  width:220px;
+
+  background:#020814;
+  border:2px solid #00e5ff;
+  border-radius:15px;
+
+  padding:15px;
+
+  text-align:center;
+
+  display:none;
+
+  box-shadow:0 0 20px rgba(0,229,255,.6);
+
+  z-index:999;
+  opacity:0;
+  transform:translateY(15px);
+  transition:all .3s ease;
+}
+
+.volume-popup.active{
+  display:block;
+  opacity:1;
+  transform:translateY(0);
+}
+
+#volumeLevel{
+  font-size:30px;
+  color:#00e5ff;
+  margin:15px 0;
+  font-weight:bold;
+}
+
+#volumeControl{
+  width:100%;
+}
+.music-popup{
+
+  position:absolute;
+
+  bottom:100px;
+  left:50px;
+
+  width:280px;
+
+  background:#020814;
+
+  border:2px solid #00e5ff;
+
+  border-radius:20px;
+
+  padding:20px;
+
+  text-align:center;
+
+  display:none;
+
+  box-shadow:0 0 20px #00e5ff;
+
+  z-index:999;
+}
+
+.music-popup.active{
+  display:block;
+}
+
+.album-cover{
+  width:120px;
+  height:120px;
+
+  object-fit:cover;
+
+  border-radius:15px;
+
+  border:2px solid #00e5ff;
+
+  margin-bottom:15px;
+}
+
+.song-title{
+  color:#00e5ff;
+  font-size:18px;
+  font-weight:bold;
+}
+
+.artist-name{
+  color:white;
+  margin:8px 0;
+}
+
+.spotify-bar{
+  width:100%;
+  height:5px;
+
+  background:#444;
+
+  border-radius:10px;
+
+  margin:15px 0;
+}
+
+.spotify-progress{
+  width:60%;
+  height:100%;
+
+  background:#1DB954;
+
+  border-radius:10px;
+}
+
+.music-controls{
+  display:flex;
+  justify-content:center;
+  gap:10px;
+}
+
+.music-controls button{
+  width:45px;
+  height:45px;
+
+  border:none;
+
+  border-radius:50%;
+
+  background:#00e5ff;
+
+  color:black;
+
+  cursor:pointer;
+}
+.dashboard-cards{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:15px;
+
+  margin-top:-10px;
+
+  position:static;
+}
+.info-card{
+  width:150px;
+  height:110px;
+
+  background:#081421;
+
+  border:1px solid #00e5ff;
+
+  border-radius:12px;
+
+  padding:10px;
+
+  text-align:center;
+
+  box-shadow:0 0 10px rgba(0,229,255,.2);
+
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+
+}
+
+.info-card h3{
+  color:#00e5ff;
+  font-size:16px;
+  margin-bottom:8px;
+}
+
+.info-card p{
+  color:white;
+  font-size:20px;
+  font-weight:bold;
+}
+
+.info-card span{
+  color:#aaa;
+  font-size:13px;
+}
