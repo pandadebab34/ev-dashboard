@@ -72,6 +72,7 @@ align-items:center;
 
 .screen h1{
 color:#00e5ff;
+margin-top:20px;
 margin-bottom:20px;
 font-size:42px;
 }
@@ -375,6 +376,7 @@ box-shadow:0 0 15px #00e5ff;
 .climate-panel{
     width:600px;
     text-align:center;
+    padding-top:30px;
 }
 
 .temp-display{
