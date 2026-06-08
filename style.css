@@ -692,13 +692,16 @@ box-shadow:0 0 15px #00e5ff;
 .dual-climate{
   display:flex;
   justify-content:center;
+  align-items:flex-start;
   gap:80px;
   margin-top:30px;
+  margin-bottom:80px;
 }
 
 .climate-side{
   width:250px;
   text-align:center;
+  padding-bottom:20px;
 }
 
 .climate-side h2{
