@@ -374,9 +374,16 @@ box-shadow:0 0 15px #00e5ff;
     transform:translateX(30px);
 }
 .climate-panel{
-    width:600px;
-    text-align:center;
-    padding-top:60px;
+    width:900px;
+    height:650px;
+    background:#000814;
+    border-radius:25px;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:flex-start;
+    padding-top:20px;
 }
 
 .temp-display{
@@ -692,13 +699,15 @@ box-shadow:0 0 15px #00e5ff;
 .dual-climate{
     display:flex;
     justify-content:center;
-    gap:40px;
+    align-items:center;
+    gap:60px;
     margin-top:20px;
+    margin-bottom:20px;
 }
-
 .climate-side{
-    width:150px;
+    width:180px;
     text-align:center;
+    color:white;
 }
 
 .climate-side h2{
