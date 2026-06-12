@@ -375,7 +375,7 @@ box-shadow:0 0 15px #00e5ff;
 }
 .climate-panel{
     width:900px;
-    height:600px;
+    height:580px;
     background:#000814;
     border-radius:25px;
     margin:auto;
@@ -700,9 +700,8 @@ box-shadow:0 0 15px #00e5ff;
     display:flex;
     justify-content:center;
     align-items:center;
-    gap:50px;
-    margin-top:5px;
-    margin-bottom:5px;
+    gap:40px;
+    margin:10px 0;
 }
 .climate-side{
     width:180px;
