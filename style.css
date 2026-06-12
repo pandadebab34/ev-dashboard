@@ -256,20 +256,20 @@ transform:scale(1.1);
     font-size:30px;
 }
 .speed-panel{
-  width:800px;
-  height:450px;
+    width:1000px;
+    height:650px;
 
-  background:#020814;
+    background:#020814;
 
-  border-radius:20px;
+    border-radius:20px;
 
-  display:flex;
-  flex-direction:column;
+    display:flex;
+    flex-direction:column;
 
-  justify-content:center;
-  align-items:center;
+    justify-content:center;
+    align-items:center;
 
-  gap:20px;
+    gap:20px;
 }
 #navigation img{
   box-shadow:0 0 20px rgba(0,229,255,.3);
@@ -753,4 +753,15 @@ box-shadow:0 0 15px #00e5ff;
 
 .temp-buttons{
     margin-top:10px;
+}
+#fan .speed-panel{
+    transform:translateY(-40px);
+}
+
+#fan .temp-buttons{
+    margin-top:20px;
+}
+
+#fan #tempSlider{
+    margin-top:20px;
 }
