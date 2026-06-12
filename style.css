@@ -375,15 +375,16 @@ box-shadow:0 0 15px #00e5ff;
 }
 .climate-panel{
     width:900px;
-    height:580px;
+    height:500px;
     background:#000814;
     border-radius:25px;
     margin:auto;
+
     display:flex;
     flex-direction:column;
     align-items:center;
-    justify-content:center;
-    padding-top:20px;
+
+    padding:30px;
 }
 
 .temp-display{
@@ -391,36 +392,59 @@ box-shadow:0 0 15px #00e5ff;
     font-weight:700;
     color:#00e5ff;
     text-shadow:0 0 20px #00e5ff;
-    margin-bottom:30px;
+    margin-bottom:15px;
 }
 
-.climate-panel h2{
+.dual-climate{
+    display:flex;
+    justify-content:center;
+    gap:100px;
     margin:15px 0;
+}
+
+.climate-side{
+    width:180px;
+    text-align:center;
     color:white;
 }
 
-#tempSlider{
-    margin-top:20px;
-    margin-bottom:20px;
+.climate-side h2{
+    color:#00e5ff;
+    font-size:24px;
+    margin-bottom:10px;
 }
-#fanSlider{
-    width:450px;
-    margin-bottom:40px;
+
+.climate-side input{
+    width:140px;
 }
+
+.fan-icon{
+    font-size:80px;
+    color:#00e5ff;
+    margin:10px 0;
+    filter:drop-shadow(0 0 15px #00e5ff);
+    animation:spin 2s linear infinite;
+}
+
 .temp-buttons{
-    margin:20px 0;
+    margin:10px 0;
 }
 
 .temp-buttons button{
-    width:55px;
-    height:55px;
+    width:45px;
+    height:45px;
     border:none;
     border-radius:50%;
     background:#00e5ff;
     color:black;
-    font-size:28px;
-    margin:0 15px;
+    font-size:24px;
+    margin:0 10px;
     cursor:pointer;
+}
+
+#tempSlider{
+    width:350px;
+    margin-top:10px;
 }
 .fan-icon{
   font-size:80px;
