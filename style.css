@@ -375,7 +375,7 @@ box-shadow:0 0 15px #00e5ff;
 }
 .climate-panel{
     width:900px;
-    height:650px;
+    height:580px;
     background:#000814;
     border-radius:25px;
     margin:auto;
@@ -718,4 +718,16 @@ box-shadow:0 0 15px #00e5ff;
 
 .climate-side input{
     width:140px;
+}
+
+.dual-climate{
+    margin:10px 0;
+}
+
+.fan-icon{
+    margin:15px 0;
+}
+
+.temp-buttons{
+    margin-top:10px;
 }
